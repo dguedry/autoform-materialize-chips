@@ -3,9 +3,11 @@ aldeed:simple-schema@1.1.0
 babel-compiler@6.14.1
 babel-runtime@1.0.1
 base64@1.0.10
-blaze@2.1.9
+blaze@2.3.0
 blaze-tools@1.0.10
 boilerplate-generator@1.0.11
+caching-compiler@1.1.9
+caching-html-compiler@1.0.7
 callback-hook@1.0.10
 check@1.2.5
 ddp@1.2.5
@@ -26,6 +28,7 @@ jquery@1.11.10
 livedata@1.0.18
 logging@1.1.17
 meteor@1.6.1
+minifier-js@1.2.18
 minimongo@1.0.21
 modules@0.7.9
 modules-runtime@0.7.9
@@ -40,7 +43,8 @@ retry@1.0.9
 routepolicy@1.0.12
 spacebars@1.0.13
 spacebars-compiler@1.0.13
-templating@1.0.11
+templating@1.1.2
+templating-tools@1.0.5
 tracker@1.1.2
 ui@1.0.12
 underscore@1.0.10
