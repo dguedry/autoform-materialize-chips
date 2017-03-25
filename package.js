@@ -11,7 +11,10 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.use(['aldeed:autoform@4.0.0 || 5.0.0', 'templating', 'blaze', 'jquery'], 'client');
+  api.use(['aldeed:autoform@4.0.0 || 5.0.0',
+          'templating@1.1.2',
+          'blaze@2.3.0',
+          'jquery@1.11.10'], 'client');
   api.addFiles([
     'materialize-chips.html',
     'materialize-chips.js'
