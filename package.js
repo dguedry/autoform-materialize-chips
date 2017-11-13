@@ -1,6 +1,6 @@
 Package.describe({
   name: 'dguedry:autoform-materialize-chips',
-  version: '0.0.1',
+  version: '0.1.0',
   // Brief, one-line summary of the package.
   summary: 'Materialize Chips (Tags) input for Autoform',
   // URL to the Git repository containing the source code for this package.
@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.use(['aldeed:autoform@4.0.0 || 5.0.0',
+  api.use(['aldeed:autoform@6.0.0',
           'templating@1.1.2',
           'blaze@2.3.0',
           'jquery@1.11.10'], 'client');
