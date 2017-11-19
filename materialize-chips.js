@@ -3,9 +3,12 @@ AutoForm.addInputType("materialize-chips", {
   valueIsArray: true,
   valueOut: function() {
     var ret = [];
-    this.material_chip('data').forEach(function(data){
-      ret.push(data.tag);
-    });
+    var datas = this.material_chip('data')
+    if (datas) {
+      datas.forEach(function(data){
+        ret.push(data.tag);
+      });
+    }
     return ret;
   },
   valueIn: function(val) {
@@ -31,12 +34,16 @@ Template.afMaterializeChips.onRendered(function() {
     template.$('.chips-autoform').material_chip({
       data: data.value,
       placeholder: params.placeholder,
-      secondaryPlaceholder:  params.secondaryPlaceholder,
-      autocompleteOptions: {
-        limit: params.autocompleteOptions.limit,
-        minLength: params.autocompleteOptions.minLength,
-        data: params.autocompleteOptions.data()
-      }
+      secondaryPlaceholder:  params.secondaryPlaceholder
     });
+    if (params && params.autocompleteOptions) {
+      template.$('.chips-autoform').material_chip({
+        autocompleteOptions: {
+          limit: params.autocompleteOptions.limit,
+          minLength: params.autocompleteOptions.minLength,
+          data: params.autocompleteOptions.data()
+        }
+      });
+    }
   });
 });
