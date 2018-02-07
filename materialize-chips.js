@@ -31,18 +31,22 @@ Template.afMaterializeChips.onRendered(function() {
   var params = this.data.atts;
   template.autorun(function () {
     var data = Template.currentData();
-    template.$('.chips-autoform').material_chip({
-      data: data.value,
-      placeholder: params.placeholder,
-      secondaryPlaceholder:  params.secondaryPlaceholder
-    });
     if (params && params.autocompleteOptions) {
       template.$('.chips-autoform').material_chip({
+        data: data.value,
+        placeholder: params.placeholder,
+        secondaryPlaceholder: params.secondaryPlaceholder,
         autocompleteOptions: {
           limit: params.autocompleteOptions.limit,
           minLength: params.autocompleteOptions.minLength,
           data: params.autocompleteOptions.data()
         }
+      });
+    } else {
+      template.$('.chips-autoform').material_chip({
+        data: data.value,
+        placeholder: params.placeholder,
+        secondaryPlaceholder: params.secondaryPlaceholder
       });
     }
   });
